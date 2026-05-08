@@ -1,0 +1,44 @@
+name: Update data from Google Sheet
+
+# Disparo manual desde la pestaña Actions del repo.
+# (Si después quieres también un cron diario, descomenta la sección 'schedule'.)
+on:
+  workflow_dispatch:
+  # schedule:
+  #   - cron: "0 13 * * *"   # cada día a las 8am hora Bogotá
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build data.json from sheet
+        env:
+          SHEET_CSV_URL: ${{ vars.SHEET_CSV_URL }}
+        run: node scripts/build-data.mjs
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- data.json; then
+            echo "Sin cambios en data.json — nada que commitear."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          git commit -m "chore(data): update data.json desde Google Sheet [skip ci]"
+          git push
