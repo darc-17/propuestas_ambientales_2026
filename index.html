@@ -511,7 +511,7 @@
             </div>
             <div class="hero-card">
               <div class="eyebrow">Qué encontrarás</div>
-              <p>Un total de <strong>9 temas</strong> y <strong>95 propuestas</strong> organizadas en una interfaz comparativa, diseñada para resaltar similitudes, diferencias y énfasis programáticos.</p>
+              <p>Un total de <strong id="cardThemes">9 temas</strong> y <strong id="cardProposals">95 propuestas</strong> organizadas en una interfaz comparativa, diseñada para resaltar similitudes, diferencias y énfasis programáticos.</p>
             </div>
           </div>
         </div>
@@ -628,6 +628,8 @@ function renderOverview() {
   document.getElementById("metaThemes").textContent = `${counts.totalThemes} temas`;
   document.getElementById("metaCandidates").textContent = `${counts.totalCandidates} candidatos`;
   document.getElementById("metaProposals").textContent = `${counts.totalProposals} propuestas`;
+  document.getElementById("cardThemes").textContent = `${counts.totalThemes} temas`;
+  document.getElementById("cardProposals").textContent = `${counts.totalProposals} propuestas`;
   document.getElementById("resultsText").textContent = state.view === "compare"
     ? `${visibleThemes.length} tema(s) visibles en modo comparativo`
     : `${visibleThemes.length} tema(s) visibles en modo candidato`;
