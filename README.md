@@ -8,7 +8,7 @@ Permite comparar por tema o explorar candidato por candidato.
 
 Elaborado para la clase de Introducción a la Economía Ambiental de la
 Universidad de los Andes, por María Alejandra Vélez, María José Medellín,
-David Rodríguez y Juan Camilo Jiménez.
+David Rodríguez Caballero y Juan Camilo Jiménez Novoa.
 
 ---
 
