@@ -1,10 +1,10 @@
 # Propuestas ambientales · candidaturas presidenciales Colombia 2026
 
-Sitio estático que recopila y organiza las propuestas sobre medio ambiente
+Sitio web que recopila y organiza las propuestas sobre medio ambiente
 de los programas de gobierno de cinco candidaturas presidenciales para 2026.
 Permite comparar por tema o explorar candidato por candidato.
 
-**Sitio en vivo:** https://darc-17.github.io/propuestas_ambientales_2026/
+**Link:** https://darc-17.github.io/propuestas_ambientales_2026/
 
 Elaborado para la clase de Introducción a la Economía Ambiental de la
 Universidad de los Andes, por María Alejandra Vélez, María José Medellín,
