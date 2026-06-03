@@ -31,9 +31,6 @@ if (!SHEET_URL) {
 const CANDIDATES_CANONICAL = [
   "Iván Cepeda",
   "Abelardo de la Espriella",
-  "Sergio Fajardo",
-  "Claudia López",
-  "Paloma Valencia",
 ];
 
 const REQUIRED_COLUMNS = ["tema", "tema_orden", "candidato", "propuesta"];
